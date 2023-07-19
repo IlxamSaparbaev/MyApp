@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Notebuk
+{% endblock title %}
+
+{% block content %}
+
+    {% for model in models %}
+        <div class="product3">
+            <h2>{{ model.title }}</h2>
+            <img src="{{ model.image.url }}" alt="">
+            <p>{{ model.description }}</p>
+            <p>Narxi: ${{ model.price }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+

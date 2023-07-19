@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ {% block title %}
+ Bo'sh sahifa
+ {% endblock %}
+ 
+{% block content %}
+    <h4>Barcha tovarlar</h4> 
+    {% for home1 in home1s %}
+        <div class="product5">
+            <h2>{{ home1.title }}</h2>
+            <img src="{{ home1.image.url }}" alt="">
+            <p>{{ home1.description }}</p>
+            <p>Narxi: ${{ home1.price }}</p>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}

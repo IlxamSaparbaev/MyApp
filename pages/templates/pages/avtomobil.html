@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Avtomobil
+{% endblock title %}
+
+    
+
+{% block content %}
+
+    {% for repair in repairs %}
+    <div class="product3">
+        <h2>{{ repair.title }}</h2>
+        <img src="{{ repair.image.url }}" alt="">
+        <p>{{ repair.description }}</p>
+        <p>Narxi: ${{ repair.price }}</p>
+    </div>
+    {% endfor %}
+    
+{% endblock %}
